@@ -1,0 +1,151 @@
+/* Estilos generales para pantallas grandes */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4; /* Ajustar según el fondo del diseño en Figma */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el pie de página esté al final */
+}
+
+header {
+    background-color: #2d2d2d; /* Ajustar según el color del encabezado en Figma */
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    flex: 1; /* Ocupa el espacio restante entre el encabezado y el pie de página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Ajustado para permitir flexibilidad */
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.input-section, .output-section {
+    width: 50%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin: 2rem 0 1rem 0; /* Ajusta el margen para bajar el textarea y centrarlo */
+    padding: 0.75rem; /* Ajustar padding según el diseño */
+    border: 1px solid #ccc; /* Ajustar según el diseño */
+    border-radius: 8px; /* Ajustar según el diseño */
+    font-size: 1rem; /* Ajustar según el diseño */
+    resize: none; /* Opcional: para evitar el redimensionamiento */
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem; /* Ajustar padding según el diseño */
+    border: none;
+    border-radius: 8px; /* Ajustar según el diseño */
+    cursor: pointer;
+    font-size: 1rem; /* Ajustar según el diseño */
+    background-color: #007bff; /* Ajustar según el diseño */
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Ajustar según el diseño */
+}
+
+#copyBtn {
+    margin-top: 1rem;
+    background-color: #28a745; /* Ajustar según el diseño */
+}
+
+#copyBtn:hover {
+    background-color: #218838; /* Ajustar según el diseño */
+}
+
+.output-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido en la sección de salida */
+    position: relative;
+}
+
+.image-container {
+    width: 100%; /* Ancho completo del contenedor */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem; /* Espacio entre la imagen y el textarea */
+}
+
+.image-container img {
+    max-width: 60%; /* Tamaño reducido de la imagen, ajusta según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+#outputText {
+    width: 100%;
+    height: 150px; /* Ajustar según el tamaño deseado */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el texto */
+    margin-bottom: 1rem; /* Espacio entre el textarea y el botón de copiar */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2d2d2d; /* Ajustar según el color del pie de página en Figma */
+    color: #ffffff;
+    margin-top: auto; /* Empuja el pie de página hacia abajo */
+}
+
+/* Media Queries para dispositivos móviles y tabletas */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Coloca los elementos en columna para pantallas pequeñas */
+    }
+
+    .input-section, .output-section {
+        width: 100%; /* Ancho completo para pantallas pequeñas */
+    }
+
+    .button-group {
+        flex-direction: column; /* Botones en columna para pantallas pequeñas */
+    }
+
+    textarea {
+        height: 120px; /* Ajusta la altura del textarea en pantallas pequeñas */
+    }
+
+    .image-container img {
+        max-width: 90%; /* Aumenta el tamaño máximo de la imagen en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    textarea {
+        height: 100px; /* Ajusta la altura del textarea en pantallas muy pequeñas */
+    }
+
+    button {
+        padding: 0.5rem 1rem; /* Ajusta el padding de los botones para pantallas muy pequeñas */
+        font-size: 0.9rem; /* Ajusta el tamaño de fuente de los botones */
+    }
+}
+
